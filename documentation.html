@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dokumentasi — Alip Fishing Journey</title>
+  <meta name="description" content="Dokumentasi foto perjalanan memancing di sungai-sungai Indonesia." />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎣</text></svg>" />
+</head>
+<body>
+
+<!-- ─── Loader ─── -->
+<div id="page-loader">
+  <div class="loader-inner">
+    <span class="loader-fish">📸</span>
+    <div class="loader-bar"><div class="loader-bar-fill"></div></div>
+    <p class="loader-text">Memuat Foto…</p>
+  </div>
+</div>
+
+<!-- ─── Navbar ─── -->
+<nav id="navbar" class="dark-nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <span class="nav-logo-icon">🎣</span>
+      <span class="nav-logo-text">Alip <span>Fishing</span></span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Beranda</a></li>
+      <li><a href="catches.html">Tangkapan</a></li>
+      <li><a href="documentation.html">Dokumentasi</a></li>
+      <li><a href="map.html">Peta Spot</a></li>
+    </ul>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<div class="nav-mobile" id="nav-mobile">
+  <a href="index.html">🏠 Beranda</a>
+  <a href="catches.html">🐟 Tangkapan Ikan</a>
+  <a href="documentation.html">📸 Dokumentasi</a>
+  <a href="map.html">🗺️ Peta Spot</a>
+</div>
+
+<!-- ─── Page Header ─── -->
+<header class="page-header">
+  <div class="page-header-content">
+    <div class="page-header-label">📸 Galeri Foto</div>
+    <h1 class="page-header-title">Dokumentasi <em>Perjalanan</em></h1>
+    <p class="page-header-sub">Momen tak terlupakan dari setiap ekspedisi memancing</p>
+  </div>
+</header>
+
+<!-- ─── Documentation Section ─── -->
+<section id="docs-section">
+
+  <!-- Tabs -->
+  <div class="docs-tabs">
+    <button class="tab-btn active" data-cat="all">🌿 Semua</button>
+    <button class="tab-btn" data-cat="perjalanan">🚗 Perjalanan</button>
+    <button class="tab-btn" data-cat="sungai">💧 Sungai</button>
+    <button class="tab-btn" data-cat="peralatan">🎣 Peralatan</button>
+    <button class="tab-btn" data-cat="pemandangan">🌅 Pemandangan</button>
+  </div>
+
+  <!-- Masonry Grid -->
+  <div class="docs-masonry">
+
+    <!-- Item 1 -->
+    <div class="doc-card reveal"
+         data-cat="perjalanan"
+         data-lightbox
+         data-img="images/documentation/trip-1.jpg"
+         data-title="Perjalanan ke Sungai Progo"
+         data-sub="Perjalanan · 12 Mar 2026"
+         data-emoji="🚗"
+         data-color="linear-gradient(135deg,#0d2b42,#1a4a6e)">
+      <div class="doc-card-img">
+        <div class="doc-placeholder dp-1" style="padding:4rem 0">🚗</div>
+        <div class="doc-cat-badge cat-perjalanan">Perjalanan</div>
+      </div>
+      <div class="doc-card-body">
+        <div class="doc-card-title">Perjalanan ke Sungai Progo</div>
+        <div class="doc-card-desc">Berangkat pukul 04.00 pagi dari rumah menuju tepian Progo yang masih diselimuti kabut.</div>
+        <div class="doc-card-date">📅 12 Maret 2026</div>
+      </div>
+    </div>
+
+    <!-- Item 2 -->
+    <div class="doc-card reveal reveal-delay-1"
+         data-cat="sungai"
+         data-lightbox
+         data-img="images/documentation/river-1.jpg"
+         data-title="Ketenangan Sungai Progo"
+         data-sub="Sungai · Kulon Progo"
+         data-emoji="💧"
+         data-color="linear-gradient(135deg,#2d5016,#4a7c24)">
+      <div class="doc-card-img">
+        <div class="doc-placeholder dp-2" style="padding:5rem 0">🌊</div>
+        <div class="doc-cat-badge cat-sungai">Sungai</div>
+      </div>
+      <div class="doc-card-body">
+        <div class="doc-card-title">Ketenangan Sungai Progo</div>
+        <div class="doc-card-desc">Air mengalir pelan di antara bebatuan. Suara alam yang menenangkan pikiran.</div>
+        <div class="doc-card-date">📅 12 Maret 2026</div>
+      </div>
+    </div>
+
+    <!-- Item 3 -->
+    <div class="doc-card reveal reveal-delay-2"
+         data-cat="peralatan"
+         data-lightbox
+         data-img="images/documentation/equipment-1.jpg"
+         data-title="Setup Pancing Terbaru"
+         data-sub="Peralatan · Rod & Reel"
+         data-emoji="🎣"
+         data-color="linear-gradient(135deg,#4a2800,#8c6020)">
+      <div class="doc-card-img">
+        <div class="doc-placeholder dp-3" style="padding:3.5rem 0">🎣</div>
+        <div class="doc-cat-badge cat-peralatan">Peralatan</div>
+      </div>
+      <div class="doc-card-body">
+        <div class="doc-card-title">Setup Pancing Terbaru</div>
+        <div class="doc-card-desc">Rod carbon fiber 2.1m dengan reel spinning 4000 series. Siap tempur di arus deras.</div>
+        <div class="doc-card-date">📅 5 Maret 2026</div>
+      </div>
+    </div>
+
+    <!-- Item 4 -->
+    <div class="doc-card reveal"
+         data-cat="pemandangan"
+         data-lightbox
+         data-img="images/documentation/view-1.jpg"
+         data-title="Fajar di Tepi Sungai"
+         data-sub="Pemandangan · Sunrise"
+         data-emoji="🌅"
+         data-color="linear-gradient(135deg,#1a1a2e,#2d4a8c)">
+      <div class="doc-card-img">
+        <div class="doc-placeholder dp-4" style="padding:6rem 0">🌅</div>
+        <div class="doc-cat-badge cat-pemandangan">Pemandangan</div>
+      </div>
+      <div class="doc-card-body">
+        <div class="doc-card-title">Fajar di Tepi Sungai</div>
+        <div class="doc-card-desc">Momen paling sakral setiap perjalanan memancing — saat matahari perlahan muncul di ufuk timur.</div>
+        <div class="doc-card-date">📅 20 Februari 2026</div>
+      </div>
+    </div>
+
+    <!-- Item 5 -->
+    <div class="doc-card reveal reveal-delay-1"
+         data-cat="perjalanan"
+         data-lightbox
+         data-img="images/documentation/trip-2.jpg"
+         data-title="Ekspedisi Sungai Oya"
+         data-sub="Perjalanan · Gunung Kidul"
+         data-emoji="🏕️"
+         data-color="linear-gradient(135deg,#2d1a00,#6b4000)">
+      <div class="doc-card-img">
+        <div class="doc-placeholder dp-5" style="padding:4.5rem 0">🏕️</div>
+        <div class="doc-cat-badge cat-perjalanan">Perjalanan</div>
+      </div>
+      <div class="doc-card-body">
+        <div class="doc-card-title">Ekspedisi Sungai Oya</div>
+        <div class="doc-card-desc">Perjalanan terjal 20 menit jalan kaki melewati hutan menuju spot tersembunyi di Gunung Kidul.</div>
+        <div class="doc-card-date">📅 15 Januari 2026</div>
+      </div>
+    </div>
+
+    <!-- Item 6 -->
+    <div class="doc-card reveal reveal-delay-2"
+         data-cat="sungai"
+         data-lightbox
+         data-img="images/documentation/river-2.jpg"
+         data-title="Arus Deras Bogowonto"
+         data-sub="Sungai · Purworejo"
+         data-emoji="🌊"
+         data-color="linear-gradient(135deg,#0d2b0d,#1a4a1a)">
+      <div class="doc-card-img">
+        <div class="doc-placeholder dp-6" style="padding:3rem 0">🌿</div>
+        <div class="doc-cat-badge cat-sungai">Sungai</div>
+      </div>
+      <div class="doc-card-body">
+        <div class="doc-card-title">Arus Deras Bogowonto</div>
+        <div class="doc-card-desc">Musim hujan membuat arus semakin deras dan menantang. Butuh teknik khusus untuk casting di sini.</div>
+        <div class="doc-card-date">📅 22 Desember 2025</div>
+      </div>
+    </div>
+
+    <!-- Item 7 -->
+    <div class="doc-card reveal"
+         data-cat="peralatan"
+         data-lightbox
+         data-img="images/documentation/equipment-2.jpg"
+         data-title="Koleksi Umpan Pilihan"
+         data-sub="Peralatan · Umpan & Lure"
+         data-emoji="🪱"
+         data-color="linear-gradient(135deg,#1a2d00,#3d5a00)">
+      <div class="doc-card-img">
+        <div class="doc-placeholder" style="background:linear-gradient(135deg,#1a2d00,#3d5a00);padding:3.5rem 0">🪱</div>
+        <div class="doc-cat-badge cat-peralatan">Peralatan</div>
+      </div>
+      <div class="doc-card-body">
+        <div class="doc-card-title">Koleksi Umpan Pilihan</div>
+        <div class="doc-card-desc">Dari cacing tanah, pelet khusus, hingga soft lure — semua sudah teruji di berbagai spot.</div>
+        <div class="doc-card-date">📅 10 Desember 2025</div>
+      </div>
+    </div>
+
+    <!-- Item 8 -->
+    <div class="doc-card reveal reveal-delay-1"
+         data-cat="pemandangan"
+         data-lightbox
+         data-img="images/documentation/view-2.jpg"
+         data-title="Hutan di Tepi Opak"
+         data-sub="Pemandangan · Bantul"
+         data-emoji="🌳"
+         data-color="linear-gradient(135deg,#0d3d0d,#2d6b2d)">
+      <div class="doc-card-img">
+        <div class="doc-placeholder" style="background:linear-gradient(135deg,#0d3d0d,#2d6b2d);padding:5rem 0">🌳</div>
+        <div class="doc-cat-badge cat-pemandangan">Pemandangan</div>
+      </div>
+      <div class="doc-card-body">
+        <div class="doc-card-title">Hutan di Tepi Opak</div>
+        <div class="doc-card-desc">Pepohonan rindang membingkai sungai — teduh dan segar meski di tengah hari.</div>
+        <div class="doc-card-date">📅 5 Februari 2026</div>
+      </div>
+    </div>
+
+    <!-- Item 9 -->
+    <div class="doc-card reveal reveal-delay-2"
+         data-cat="perjalanan"
+         data-lightbox
+         data-img="images/documentation/trip-3.jpg"
+         data-title="Bekal untuk Perjalanan"
+         data-sub="Perjalanan · Persiapan"
+         data-emoji="🎒"
+         data-color="linear-gradient(135deg,#2d1a00,#5a3a00)">
+      <div class="doc-card-img">
+        <div class="doc-placeholder" style="background:linear-gradient(135deg,#2d1a00,#5a3a00);padding:4rem 0">🎒</div>
+        <div class="doc-cat-badge cat-perjalanan">Perjalanan</div>
+      </div>
+      <div class="doc-card-body">
+        <div class="doc-card-title">Bekal untuk Perjalanan</div>
+        <div class="doc-card-desc">Persiapan matang kunci sukses perjalanan — nasi bungkus, termos kopi, dan semangat membara.</div>
+        <div class="doc-card-date">📅 12 Maret 2026</div>
+      </div>
+    </div>
+
+  </div><!-- /docs-masonry -->
+</section>
+
+<!-- ─── Lightbox ─── -->
+<div id="lightbox">
+  <button class="lightbox-close" id="lb-close">✕</button>
+  <div class="lightbox-inner">
+    <img class="lightbox-img" id="lb-img" src="" alt="" style="display:none" />
+    <div class="lightbox-img-placeholder" id="lb-placeholder"></div>
+    <div class="lightbox-info">
+      <div class="lightbox-title" id="lb-title"></div>
+      <div class="lightbox-sub" id="lb-sub"></div>
+    </div>
+  </div>
+</div>
+
+<!-- ─── Footer ─── -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="nav-logo" style="margin-bottom:1rem">
+          <span class="nav-logo-icon">🎣</span>
+          <span class="nav-logo-text">Alip <span>Fishing</span> Journey</span>
+        </div>
+        <p>Mendokumentasikan keindahan sungai dan alam Indonesia melalui perjalanan memancing yang penuh makna.</p>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Navigasi</div>
+        <a href="index.html">Beranda</a>
+        <a href="catches.html">Tangkapan Ikan</a>
+        <a href="documentation.html">Dokumentasi</a>
+        <a href="map.html">Peta Spot</a>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Info</div>
+        <a href="#">Tentang Jurnal</a>
+        <a href="#">Spot Favorit</a>
+        <a href="#">Tips Memancing</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copy">© 2026 Alip Fishing Journey. Dibuat dengan <span class="footer-heart">♥</span> untuk alam.</span>
+      <span class="footer-tagline">"Sabar dan nikmati setiap momen di tepi sungai."</span>
+    </div>
+  </div>
+</footer>
+
+<button id="back-to-top" aria-label="Kembali ke atas">↑</button>
+
+<script src="script.js"></script>
+</body>
+</html>
