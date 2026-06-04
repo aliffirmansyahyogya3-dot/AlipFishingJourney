@@ -1,0 +1,114 @@
+‎<!DOCTYPE html>
+‎<html lang="id">
+‎<head>
+‎    <meta charset="UTF-8">
+‎    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+‎    <title>Alip Fishing Journey - Beranda</title>
+‎    <link rel="preconnect" href="https://fonts.googleapis.com">
+‎    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+‎    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+‎    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+‎    <link rel="stylesheet" href="style.css">
+‎</head>
+‎<body>
+‎
+‎    <div class="loader-container" id="loader">
+‎        <div class="ripple-loader">
+‎            <div></div>
+‎            <div></div>
+‎        </div>
+‎    </div>
+‎
+‎    <nav class="navbar">
+‎        <div class="nav-container">
+‎            <a href="index.html" class="logo">
+‎                <i class="fa-solid fa-water"></i> Alip<span>Fishing</span>
+‎            </a>
+‎            <ul class="nav-links" id="navLinks">
+‎                <li><a href="index.html" class="active">Beranda</a></li>
+‎                <li><a href="catches.html">Tangkapan</a></li>
+‎                <li><a href="documentation.html">Dokumentasi</a></li>
+‎                <li><a href="map.html">Spot Map</a></li>
+‎            </ul>
+‎            <div class="menu-toggle" id="mobileMenu">
+‎                <i class="fa-solid fa-bars"></i>
+‎            </div>
+‎        </div>
+‎    </nav>
+‎
+‎    <header class="hero">
+‎        <div class="hero-overlay"></div>
+‎        <div class="hero-content scroll-reveal">
+‎            <span class="hero-tag">Digital River Journal</span>
+‎            <h1>Alip Fishing Journey</h1>
+‎            <p>Mendokumentasikan setiap perjalanan dan tangkapan ikan di alam Indonesia yang tenang.</p>
+‎            <a href="#explore" class="btn btn-primary">Jelajahi Jurnal <i class="fa-solid fa-arrow-down"></i></a>
+‎        </div>
+‎    </header>
+‎
+‎    <main class="main-content" id="explore">
+‎        <section class="features-container">
+‎            <div class="section-title scroll-reveal">
+‎                <h2>Jurnal Perjalanan</h2>
+‎                <p>Pilih kategori untuk melihat catatan petualangan memancing</p>
+‎            </div>
+‎
+‎            <div class="grid-features">
+‎                <div class="feature-card scroll-reveal" onclick="location.href='catches.html'">
+‎                    <div class="card-bg-preview" style="background-image: url('images/fish/gabus-1.jpg');"></div>
+‎                    <div class="card-glass-content">
+‎                        <div class="card-icon">
+‎                            <i class="fa-solid fa-fish-fins"></i>
+‎                        </div>
+‎                        <h3>Tangkapan Ikan</h3>
+‎                        <p>Daftar spesies, berat, dan rekam jejak ikan yang berhasil didaratkan.</p>
+‎                        <div class="card-stats">
+‎                            <span><i class="fa-solid fa-circle-check"></i> Total: 42 Ekor</span>
+‎                        </div>
+‎                        <span class="card-link">Buka Galeri <i class="fa-solid fa-chevron-right"></i></span>
+‎                    </div>
+‎                </div>
+‎
+‎                <div class="feature-card scroll-reveal" onclick="location.href='documentation.html'">
+‎                    <div class="card-bg-preview" style="background-image: url('images/documentation/trip-1.jpg');"></div>
+‎                    <div class="card-glass-content">
+‎                        <div class="card-icon">
+‎                            <i class="fa-solid fa-camera"></i>
+‎                        </div>
+‎                        <h3>Dokumentasi</h3>
+‎                        <p>Kumpulan foto suasana sungai, lanskap alam, dan persiapan peralatan.</p>
+‎                        <div class="card-stats">
+‎                            <span><i class="fa-solid fa-images"></i> 4 Kategori Album</span>
+‎                        </div>
+‎                        <span class="card-link">Lihat Momen <i class="fa-solid fa-chevron-right"></i></span>
+‎                    </div>
+‎                </div>
+‎
+‎                <div class="feature-card scroll-reveal" onclick="location.href='map.html'">
+‎                    <div class="card-bg-preview" style="background-image: url('images/spots/spot-progo.jpg');"></div>
+‎                    <div class="card-glass-content">
+‎                        <div class="card-icon">
+‎                            <i class="fa-solid fa-map-location-dot"></i>
+‎                        </div>
+‎                        <h3>Map Spot Memancing</h3>
+‎                        <p>Peta interaktif titik lokasi memancing rahasia di aliran sungai alami.</p>
+‎                        <div class="card-stats">
+‎                            <span><i class="fa-solid fa-location-pin"></i> 3 Spot Utama</span>
+‎                        </div>
+‎                        <span class="card-link">Buka Peta <i class="fa-solid fa-chevron-right"></i></span>
+‎                    </div>
+‎                </div>
+‎            </div>
+‎        </section>
+‎    </main>
+‎
+‎    <footer>
+‎        <p>&copy; 2026 Alip Fishing Journey. Built with Passion & Nature vibes.</p>
+‎    </footer>
+‎
+‎    <button class="back-to-top" id="backToTop"><i class="fa-solid fa-arrow-up"></i></button>
+‎
+‎    <script src="script.js"></script>
+‎</body>
+‎</html>
+‎
