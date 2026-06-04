@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alip Fishing Journey</title>
+
+  <!-- ============================================================
+       FONT: Playfair Display (display) + DM Sans (body)
+       ============================================================ -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- ============================================================
+       ICON: Lucide Icons (CDN)
+       ============================================================ -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+
+  <!-- ============================================================
+       STYLESHEET utama
+       ============================================================ -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ============================================================
+       NAVBAR — sticky, glassmorphism
+       ============================================================ -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <!-- Logo / Brand -->
+      <a href="#home" class="nav-brand">
+        <span class="brand-icon">🎣</span>
+        <span>Alip<span class="brand-accent"> Fishing</span></span>
+      </a>
+
+      <!-- Menu Links -->
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about"    class="nav-link">Tentang</a></li>
+        <li><a href="#gallery"  class="nav-link">Galeri</a></li>
+        <li><a href="#stats"    class="nav-link">Statistik</a></li>
+        <li><a href="#spots"    class="nav-link">Spot</a></li>
+        <li><a href="#timeline" class="nav-link">Perjalanan</a></li>
+      </ul>
+
+      <!-- Hamburger (mobile) -->
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ============================================================
+       HERO SECTION
+       ============================================================ -->
+  <section class="hero" id="home">
+    <!-- Parallax background layers -->
+    <div class="hero-bg" id="heroBg"></div>
+    <div class="hero-overlay"></div>
+
+    <!-- Floating particles -->
+    <div class="particles" id="particles"></div>
+
+    <!-- Hero content -->
+    <div class="hero-content fade-up">
+      <p class="hero-eyebrow">✦ Petualangan Alam Indonesia ✦</p>
+      <h1 class="hero-title">
+        Alip<br />
+        <em>Fishing</em><br />
+        Journey
+      </h1>
+      <p class="hero-subtitle">
+        Mendokumentasikan setiap petualangan dan tangkapan ikan<br class="hide-mobile" />
+        di alam Indonesia yang indah.
+      </p>
+
+      <!-- CTA Buttons -->
+      <div class="hero-btns">
+        <a href="#gallery"  class="btn btn-primary">Lihat Galeri</a>
+        <a href="#timeline" class="btn btn-outline">Jelajahi Perjalanan</a>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="scroll-indicator">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       ABOUT SECTION
+       ============================================================ -->
+  <section class="section about" id="about">
+    <div class="container">
+
+      <!-- Section header -->
+      <div class="section-header fade-up">
+        <p class="section-tag">Tentang Saya</p>
+        <h2 class="section-title">Lebih dari Sekadar<br /><em>Memancing</em></h2>
+      </div>
+
+      <!-- Two-column layout -->
+      <div class="about-grid">
+        <!-- Text column -->
+        <div class="about-text fade-up">
+          <p class="about-lead">
+            Memancing bukan sekadar olahraga — ini adalah cara saya berbicara dengan alam.
+            Setiap kali joran melengkung dan senar menegang, ada sensasi tak tergantikan
+            yang hanya bisa dirasakan di tepi sungai yang tenang.
+          </p>
+          <p class="about-body">
+            Saya, Alip, telah menjelajahi berbagai sungai di Pulau Jawa, Sumatera, dan Kalimantan
+            sejak 2018. Dari ikan mas di sungai jernih pegunungan hingga patin raksasa di
+            sungai besar, setiap tangkapan adalah cerita tersendiri.
+          </p>
+          <p class="about-body">
+            Website ini adalah jurnal visual perjalanan saya — dokumentasi spot, teknik,
+            dan momen-momen berharga bersama alam.
+          </p>
+        </div>
+
+        <!-- Cards column -->
+        <div class="about-cards fade-up">
+          <!-- Card 1 -->
+          <div class="about-card glass-card">
+            <div class="about-card-icon">🌊</div>
+            <div>
+              <h4>Sungai & Danau</h4>
+              <p>Menjelajahi perairan air tawar terbaik di Nusantara</p>
+            </div>
+          </div>
+          <!-- Card 2 -->
+          <div class="about-card glass-card">
+            <div class="about-card-icon">🐟</div>
+            <div>
+              <h4>Ikan Air Tawar</h4>
+              <p>Spesialisasi pada ikan endemik lokal yang unik dan menantang</p>
+            </div>
+          </div>
+          <!-- Card 3 -->
+          <div class="about-card glass-card">
+            <div class="about-card-icon">🏕️</div>
+            <div>
+              <h4>Petualangan Alam</h4>
+              <p>Camping, hiking, dan menyatu dengan alam liar Indonesia</p>
+            </div>
+          </div>
+          <!-- Card 4 -->
+          <div class="about-card glass-card">
+            <div class="about-card-icon">📸</div>
+            <div>
+              <h4>Dokumentasi</h4>
+              <p>Mengabadikan setiap momen berharga di alam terbuka</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================
+       GALLERY SECTION
+       ============================================================ -->
+  <section class="section gallery" id="gallery">
+    <div class="container">
+
+      <!-- Header -->
+      <div class="section-header fade-up">
+        <p class="section-tag">Galeri Tangkapan</p>
+        <h2 class="section-title">Koleksi <em>Terbaik</em> Saya</h2>
+      </div>
+
+      <!-- Filter Buttons -->
+      <div class="gallery-filters fade-up">
+        <button class="filter-btn active" data-filter="all">Semua</button>
+        <button class="filter-btn" data-filter="mas">Ikan Mas</button>
+        <button class="filter-btn" data-filter="patin">Patin</button>
+        <button class="filter-btn" data-filter="nila">Nila</button>
+        <button class="filter-btn" data-filter="lele">Lele</button>
+        <button class="filter-btn" data-filter="gabus">Gabus</button>
+      </div>
+
+      <!-- Gallery Grid -->
+      <div class="gallery-grid" id="galleryGrid">
+
+        <!-- Item 1 -->
+        <div class="gallery-item fade-up" data-category="mas" data-index="0">
+          <div class="gallery-img-wrap">
+            <img src="https://picsum.photos/seed/fish1/600/450" alt="Ikan Mas" loading="lazy" />
+            <div class="gallery-overlay">
+              <i data-lucide="zoom-in" class="overlay-icon"></i>
+            </div>
+          </div>
+          <div class="gallery-info">
+            <span class="fish-badge">Ikan Mas</span>
+            <h4>Cyprinus carpio</h4>
+            <div class="fish-meta">
+              <span><i data-lucide="weight" size="14"></i> 3.2 kg</span>
+              <span><i data-lucide="map-pin" size="14"></i> Sungai Citarum</span>
+            </div>
+            <span class="fish-date">12 Jan 2025</span>
+          </div>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="gallery-item fade-up" data-category="patin" data-index="1">
+          <div class="gallery-img-wrap">
+            <img src="https://picsum.photos/seed/fish2/600/450" alt="Ikan Patin" loading="lazy" />
+            <div class="gallery-overlay">
+              <i data-lucide="zoom-in" class="overlay-icon"></i>
+            </div>
+          </div>
+          <div class="gallery-info">
+            <span class="fish-badge badge-patin">Patin</span>
+            <h4>Pangasius sp.</h4>
+            <div class="fish-meta">
+              <span><i data-lucide="weight" size="14"></i> 8.5 kg</span>
+              <span><i data-lucide="map-pin" size="14"></i> Sungai Kapuas</span>
+            </div>
+            <span class="fish-date">03 Mar 2025</span>
+          </div>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="gallery-item fade-up" data-category="nila" data-index="2">
+          <div class="gallery-img-wrap">
+            <img src="https://picsum.photos/seed/fish3/600/450" alt="Ikan Nila" loading="lazy" />
+            <div class="gallery-overlay">
+              <i data-lucide="zoom-in" class="overlay-icon"></i>
+            </div>
+          </div>
+          <div class="gallery-info">
+            <span class="fish-badge badge-nila">Nila</span>
+            <h4>Oreochromis niloticus</h4>
+            <div class="fish-meta">
+              <span><i data-lucide="weight" size="14"></i> 1.8 kg</span>
+              <span><i data-lucide="map-pin" size="14"></i> Waduk Jatiluhur</span>
+            </div>
+            <span class="fish-date">17 Apr 2025</span>
+          </div>
+        </div>
+
+        <!-- Item 4 -->
+        <div class="gallery-item fade-up" data-category="gabus" data-index="3">
+          <div class="gallery-img-wrap">
+            <img src="https://picsum.photos/seed/fish4/600/450" alt="Ikan Gabus" loading="lazy" />
+            <div class="gallery-overlay">
+              <i data-lucide="zoom-in" class="overlay-icon"></i>
+            </div>
+          </div>
+          <div class="gallery-info">
+            <span class="fish-badge badge-gabus">Gabus</span>
+            <h4>Channa striata</h4>
+            <div class="fish-meta">
+              <span><i data-lucide="weight" size="14"></i> 2.1 kg</span>
+              <span><i data-lucide="map-pin" size="14"></i> Rawa Pening</span>
+            </div>
+            <span class="fish-date">22 Mei 2025</span>
+          </div>
+        </div>
+
+        <!-- Item 5 -->
+        <div class="gallery-item fade-up" data-category="lele" data-index="4">
+          <div class="gallery-img-wrap">
+            <img src="https://picsum.photos/seed/fish5/600/450" alt="Ikan Lele" loading="lazy" />
+            <div class="gallery-overlay">
+              <i data-lucide="zoom-in" class="overlay-icon"></i>
+            </div>
+          </div>
+          <div class="gallery-info">
+            <span class="fish-badge badge-lele">Lele</span>
+            <h4>Clarias batrachus</h4>
+            <div class="fish-meta">
+              <span><i data-lucide="weight" size="14"></i> 1.5 kg</span>
+              <span><i data-lucide="map-pin" size="14"></i> Sungai Bengawan Solo</span>
+            </div>
+            <span class="fish-date">08 Jun 2025</span>
+          </div>
+        </div>
+
+        <!-- Item 6 -->
+        <div class="gallery-item fade-up" data-category="mas" data-index="5">
+          <div class="gallery-img-wrap">
+            <img src="https://picsum.photos/seed/fish6/600/450" alt="Ikan Mas Koki" loading="lazy" />
+            <div class="gallery-overlay">
+              <i data-lucide="zoom-in" class="overlay-icon"></i>
+            </div>
+          </div>
+          <div class="gallery-info">
+            <span class="fish-badge">Ikan Mas</span>
+            <h4>Cyprinus carpio</h4>
+            <div class="fish-meta">
+              <span><i data-lucide="weight" size="14"></i> 4.7 kg</span>
+              <span><i data-lucide="map-pin" size="14"></i> Sungai Ciliwung Hulu</span>
+            </div>
+            <span class="fish-date">14 Jul 2025</span>
+          </div>
+        </div>
+
+        <!-- Item 7 -->
+        <div class="gallery-item fade-up" data-category="patin" data-index="6">
+          <div class="gallery-img-wrap">
+            <img src="https://picsum.photos/seed/fish7/600/450" alt="Patin Besar" loading="lazy" />
+            <div class="gallery-overlay">
+              <i data-lucide="zoom-in" class="overlay-icon"></i>
+            </div>
+          </div>
+          <div class="gallery-info">
+            <span class="fish-badge badge-patin">Patin</span>
+            <h4>Pangasius hypophthalmus</h4>
+            <div class="fish-meta">
+              <span><i data-lucide="weight" size="14"></i> 12.3 kg</span>
+              <span><i data-lucide="map-pin" size="14"></i> Sungai Musi</span>
+            </div>
+            <span class="fish-date">29 Agt 2025</span>
+          </div>
+        </div>
+
+        <!-- Item 8 -->
+        <div class="gallery-item fade-up" data-category="nila" data-index="7">
+          <div class="gallery-img-wrap">
+            <img src="https://picsum.photos/seed/fish8/600/450" alt="Nila Jumbo" loading="lazy" />
+            <div class="gallery-overlay">
+              <i data-lucide="zoom-in" class="overlay-icon"></i>
+            </div>
+          </div>
+          <div class="gallery-info">
+            <span class="fish-badge badge-nila">Nila</span>
+            <h4>Oreochromis niloticus</h4>
+            <div class="fish-meta">
+              <span><i data-lucide="weight" size="14"></i> 2.4 kg</span>
+              <span><i data-lucide="map-pin" size="14"></i> Danau Toba</span>
+            </div>
+            <span class="fish-date">11 Sep 2025</span>
+          </div>
+        </div>
+
+      </div><!-- /.gallery-grid -->
+
+    </div>
+  </section>
+
+  <!-- ============================================================
+       LIGHTBOX (hidden, activated by JS)
+       ============================================================ -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Tutup">
+      <i data-lucide="x"></i>
+    </button>
+    <button class="lightbox-prev" id="lightboxPrev" aria-label="Sebelumnya">
+      <i data-lucide="chevron-left"></i>
+    </button>
+    <button class="lightbox-next" id="lightboxNext" aria-label="Berikutnya">
+      <i data-lucide="chevron-right"></i>
+    </button>
+    <div class="lightbox-content">
+      <img src="" alt="" id="lightboxImg" />
+      <div class="lightbox-caption" id="lightboxCaption"></div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       STATISTIK SECTION
+       ============================================================ -->
+  <section class="section stats" id="stats">
+    <div class="container">
+
+      <div class="section-header fade-up">
+        <p class="section-tag">Statistik</p>
+        <h2 class="section-title">Rekam Jejak <em>Petualangan</em></h2>
+      </div>
+
+      <div class="stats-grid">
+        <!-- Stat 1 -->
+        <div class="stat-card glass-card fade-up">
+          <div class="stat-icon">🐟</div>
+          <div class="stat-number" data-target="247">0</div>
+          <div class="stat-label">Total Ikan Tertangkap</div>
+        </div>
+        <!-- Stat 2 -->
+        <div class="stat-card glass-card fade-up">
+          <div class="stat-icon">🗺️</div>
+          <div class="stat-number" data-target="38">0</div>
+          <div class="stat-label">Total Trip Memancing</div>
+        </div>
+        <!-- Stat 3 -->
+        <div class="stat-card glass-card fade-up">
+          <div class="stat-icon">⚖️</div>
+          <div class="stat-number" data-target="123" data-suffix=" kg">0</div>
+          <div class="stat-label">Ikan Terberat (Record)</div>
+        </div>
+        <!-- Stat 4 -->
+        <div class="stat-card glass-card fade-up">
+          <div class="stat-icon">📍</div>
+          <div class="stat-number" data-target="15">0</div>
+          <div class="stat-label">Sungai & Danau Dijelajahi</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SPOT MEMANCING FAVORIT
+       ============================================================ -->
+  <section class="section spots" id="spots">
+    <div class="container">
+
+      <div class="section-header fade-up">
+        <p class="section-tag">Spot Favorit</p>
+        <h2 class="section-title">Surga <em>Air Tawar</em> Nusantara</h2>
+      </div>
+
+      <div class="spots-grid">
+
+        <!-- Spot 1 -->
+        <div class="spot-card fade-up">
+          <div class="spot-img-wrap">
+            <img src="https://picsum.photos/seed/river1/800/500" alt="Sungai Citarum" loading="lazy" />
+            <div class="spot-overlay">
+              <span class="spot-tag">Jawa Barat</span>
+            </div>
+          </div>
+          <div class="spot-body">
+            <h3>Sungai Citarum Hulu</h3>
+            <p>Spot legendaris untuk ikan mas dan nilem. Air jernih pegunungan dengan arus yang sempurna untuk teknik casting.</p>
+            <div class="spot-meta">
+              <span>🐟 Mas, Nilem, Beunteur</span>
+              <span>⭐ 4.9/5</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Spot 2 -->
+        <div class="spot-card fade-up">
+          <div class="spot-img-wrap">
+            <img src="https://picsum.photos/seed/river2/800/500" alt="Sungai Kapuas" loading="lazy" />
+            <div class="spot-overlay">
+              <span class="spot-tag">Kalimantan Barat</span>
+            </div>
+          </div>
+          <div class="spot-body">
+            <h3>Sungai Kapuas</h3>
+            <p>Sungai terpanjang di Indonesia. Surga patin dan belida raksasa yang menjadi incaran para pemancing profesional.</p>
+            <div class="spot-meta">
+              <span>🐟 Patin, Belida, Baung</span>
+              <span>⭐ 5.0/5</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Spot 3 -->
+        <div class="spot-card fade-up">
+          <div class="spot-img-wrap">
+            <img src="https://picsum.photos/seed/river3/800/500" alt="Danau Toba" loading="lazy" />
+            <div class="spot-overlay">
+              <span class="spot-tag">Sumatera Utara</span>
+            </div>
+          </div>
+          <div class="spot-body">
+            <h3>Danau Toba</h3>
+            <p>Danau vulkanik terbesar di Asia Tenggara. Nila jumbo dan ikan batak endemik membuat spot ini tak tertandingi.</p>
+            <div class="spot-meta">
+              <span>🐟 Nila, Mujair, Pora-pora</span>
+              <span>⭐ 4.8/5</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Spot 4 -->
+        <div class="spot-card fade-up">
+          <div class="spot-img-wrap">
+            <img src="https://picsum.photos/seed/river4/800/500" alt="Rawa Pening" loading="lazy" />
+            <div class="spot-overlay">
+              <span class="spot-tag">Jawa Tengah</span>
+            </div>
+          </div>
+          <div class="spot-body">
+            <h3>Rawa Pening</h3>
+            <p>Danau alami di kaki Gunung Merbabu. Surga gabus dan tawes dengan suasana pagi berkabut yang menakjubkan.</p>
+            <div class="spot-meta">
+              <span>🐟 Gabus, Tawes, Wader</span>
+              <span>⭐ 4.7/5</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Spot 5 -->
+        <div class="spot-card fade-up">
+          <div class="spot-img-wrap">
+            <img src="https://picsum.photos/seed/river5/800/500" alt="Sungai Musi" loading="lazy" />
+            <div class="spot-overlay">
+              <span class="spot-tag">Sumatera Selatan</span>
+            </div>
+          </div>
+          <div class="spot-body">
+            <h3>Sungai Musi</h3>
+            <p>Sungai bersejarah di Palembang dengan kekayaan ikan yang luar biasa. Patin dan baung ukuran monster sering tertangkap di sini.</p>
+            <div class="spot-meta">
+              <span>🐟 Patin, Baung, Toman</span>
+              <span>⭐ 4.8/5</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Spot 6 -->
+        <div class="spot-card fade-up">
+          <div class="spot-img-wrap">
+            <img src="https://picsum.photos/seed/river6/800/500" alt="Bengawan Solo" loading="lazy" />
+            <div class="spot-overlay">
+              <span class="spot-tag">Jawa Tengah</span>
+            </div>
+          </div>
+          <div class="spot-body">
+            <h3>Bengawan Solo</h3>
+            <p>Sungai terpanjang di Pulau Jawa. Spot yang kaya kenangan dan lele jumbo yang membuat jantung berdegup kencang.</p>
+            <div class="spot-meta">
+              <span>🐟 Lele, Beong, Keting</span>
+              <span>⭐ 4.6/5</span>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /.spots-grid -->
+    </div>
+  </section>
+
+  <!-- ============================================================
+       TIMELINE PERJALANAN
+       ============================================================ -->
+  <section class="section timeline" id="timeline">
+    <div class="container">
+
+      <div class="section-header fade-up">
+        <p class="section-tag">Riwayat Perjalanan</p>
+        <h2 class="section-title">Jejak <em>Petualangan</em> Saya</h2>
+      </div>
+
+      <div class="timeline-wrap">
+
+        <!-- Item 1 -->
+        <div class="timeline-item fade-up">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">
+            <span>Sep 2025</span>
+          </div>
+          <div class="timeline-card glass-card">
+            <div class="tl-header">
+              <span class="tl-badge">Trip Terbaru</span>
+              <h3>Danau Toba — Ekspedisi Nila Jumbo</h3>
+            </div>
+            <p>Perjalanan selama 4 hari ke Danau Toba, Sumatera Utara. Berhasil menangkap 12 ekor nila di atas 2 kg menggunakan teknik jigging. Pemandangan sunrise di atas danau vulkanik ini tak terlupakan.</p>
+            <div class="tl-meta">
+              <span>📍 Danau Toba, Sumut</span>
+              <span>🐟 12 ekor</span>
+              <span>⏱ 4 hari</span>
+            </div>
+            <img src="https://picsum.photos/seed/trip1/700/300" alt="Danau Toba Trip" class="tl-img" loading="lazy" />
+          </div>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="timeline-item fade-up">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">
+            <span>Agt 2025</span>
+          </div>
+          <div class="timeline-card glass-card">
+            <div class="tl-header">
+              <h3>Sungai Musi — Berburu Patin Monster</h3>
+            </div>
+            <p>Trip epik ke Palembang bersama 3 orang teman. Rekor pribadi baru berhasil dipecahkan dengan menangkap patin seberat 12.3 kg. Kami camp di tepian sungai selama 3 malam.</p>
+            <div class="tl-meta">
+              <span>📍 Sungai Musi, Palembang</span>
+              <span>🐟 8 ekor</span>
+              <span>⏱ 3 hari</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="timeline-item fade-up">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">
+            <span>Mei 2025</span>
+          </div>
+          <div class="timeline-card glass-card">
+            <div class="tl-header">
+              <h3>Rawa Pening — Sunrise Gabus</h3>
+            </div>
+            <p>Berangkat pukul 4 pagi untuk mengejar golden hour di Rawa Pening. Kabut pagi menyelimuti permukaan danau seperti mimpi. Total 5 gabus berhasil ditangkap sebelum matahari sepenuhnya terbit.</p>
+            <div class="tl-meta">
+              <span>📍 Rawa Pening, Ambarawa</span>
+              <span>🐟 5 ekor</span>
+              <span>⏱ 1 hari</span>
+            </div>
+            <img src="https://picsum.photos/seed/trip3/700/300" alt="Rawa Pening Trip" class="tl-img" loading="lazy" />
+          </div>
+        </div>
+
+        <!-- Item 4 -->
+        <div class="timeline-item fade-up">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">
+            <span>Mar 2025</span>
+          </div>
+          <div class="timeline-card glass-card">
+            <div class="tl-header">
+              <h3>Sungai Kapuas — Ekspedisi Kalimantan</h3>
+            </div>
+            <p>Petualangan terpanjang sejauh ini — 7 hari mengarungi Sungai Kapuas dengan perahu kayu tradisional. Keanekaragaman ikan di sini luar biasa, termasuk belida yang nyaris punah.</p>
+            <div class="tl-meta">
+              <span>📍 Sungai Kapuas, Kalbar</span>
+              <span>🐟 22 ekor</span>
+              <span>⏱ 7 hari</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 5 -->
+        <div class="timeline-item fade-up">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">
+            <span>Jan 2025</span>
+          </div>
+          <div class="timeline-card glass-card">
+            <div class="tl-header">
+              <h3>Citarum Hulu — Awal Tahun Baru</h3>
+            </div>
+            <p>Membuka tahun 2025 dengan trip ke Citarum hulu. Air jernih, udara segar pegunungan, dan ikan mas yang gemuk menyambut tahun baru dengan sempurna.</p>
+            <div class="tl-meta">
+              <span>📍 Citarum Hulu, Jabar</span>
+              <span>🐟 15 ekor</span>
+              <span>⏱ 2 hari</span>
+            </div>
+            <img src="https://picsum.photos/seed/trip5/700/300" alt="Citarum Hulu Trip" class="tl-img" loading="lazy" />
+          </div>
+        </div>
+
+      </div><!-- /.timeline-wrap -->
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <!-- Brand -->
+        <div class="footer-brand">
+          <span class="brand-icon">🎣</span>
+          <span class="footer-brand-name">Alip Fishing Journey</span>
+          <p>Mendokumentasikan setiap petualangan memancing di alam Indonesia yang indah.</p>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-links">
+          <h5>Navigasi</h5>
+          <ul>
+            <li><a href="#about">Tentang</a></li>
+            <li><a href="#gallery">Galeri</a></li>
+            <li><a href="#stats">Statistik</a></li>
+            <li><a href="#spots">Spot</a></li>
+            <li><a href="#timeline">Perjalanan</a></li>
+          </ul>
+        </div>
+
+        <!-- Social Media -->
+        <div class="footer-social">
+          <h5>Ikuti Saya</h5>
+          <div class="social-icons">
+            <a href="#" class="social-btn" aria-label="Instagram">
+              <i data-lucide="instagram"></i>
+            </a>
+            <a href="#" class="social-btn" aria-label="YouTube">
+              <i data-lucide="youtube"></i>
+            </a>
+            <a href="#" class="social-btn" aria-label="TikTok">
+              <i data-lucide="video"></i>
+            </a>
+            <a href="#" class="social-btn" aria-label="Facebook">
+              <i data-lucide="facebook"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2025 Alip Fishing Journey. Dibuat dengan ❤️ dan cinta memancing.</p>
+        <p class="footer-tagline">Made with vanilla HTML · CSS · JS</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============================================================
+       BACK TO TOP BUTTON
+       ============================================================ -->
+  <button class="back-top" id="backTop" aria-label="Kembali ke atas">
+    <i data-lucide="chevron-up"></i>
+  </button>
+
+  <!-- ============================================================
+       SCRIPT UTAMA
+       ============================================================ -->
+  <script src="script.js"></script>
+</body>
+</html>
