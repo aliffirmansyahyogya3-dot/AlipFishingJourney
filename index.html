@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alip Fishing Journey — Jurnal Memancing Alam Indonesia</title>
+  <meta name="description" content="Mendokumentasikan setiap perjalanan dan tangkapan ikan di alam Indonesia." />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎣</text></svg>" />
+</head>
+<body>
+
+<!-- ─── Loader ─── -->
+<div id="page-loader">
+  <div class="loader-inner">
+    <span class="loader-fish">🐟</span>
+    <div class="loader-bar"><div class="loader-bar-fill"></div></div>
+    <p class="loader-text">Memuat Perjalanan…</p>
+  </div>
+</div>
+
+<!-- ─── Navbar ─── -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <span class="nav-logo-icon">🎣</span>
+      <span class="nav-logo-text">Alip <span>Fishing</span></span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Beranda</a></li>
+      <li><a href="catches.html">Tangkapan</a></li>
+      <li><a href="documentation.html">Dokumentasi</a></li>
+      <li><a href="map.html">Peta Spot</a></li>
+    </ul>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div class="nav-mobile" id="nav-mobile">
+  <a href="index.html">🏠 Beranda</a>
+  <a href="catches.html">🐟 Tangkapan Ikan</a>
+  <a href="documentation.html">📸 Dokumentasi</a>
+  <a href="map.html">🗺️ Peta Spot</a>
+</div>
+
+<!-- ─── Hero ─── -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-ripple"></div>
+  <div class="hero-particles"></div>
+
+  <div class="hero-content">
+    <div class="hero-eyebrow">
+      <span class="hero-eyebrow-dot"></span>
+      Jurnal Digital Memancing
+    </div>
+    <h1 class="hero-title">
+      Alip Fishing
+      <em>Journey</em>
+    </h1>
+    <p class="hero-sub">
+      Mendokumentasikan setiap perjalanan dan tangkapan ikan<br>di alam sungai Indonesia yang indah.
+    </p>
+    <div class="hero-cta">
+      <a href="catches.html" class="btn btn-gold">🐟 Lihat Tangkapan</a>
+      <a href="map.html" class="btn btn-outline">🗺️ Jelajahi Spot</a>
+    </div>
+  </div>
+
+  <div class="hero-scroll">
+    <div class="scroll-line"></div>
+    Gulir ke bawah
+  </div>
+</section>
+
+<!-- ─── Feature Cards ─── -->
+<section id="features">
+  <div class="features-header reveal">
+    <span class="section-label">Eksplorasi</span>
+    <h2 class="section-title">Semua dalam Satu <em>Jurnal</em></h2>
+    <p class="section-desc">Dari tangkapan hingga lokasi spot — semuanya terdokumentasi dengan rapi.</p>
+  </div>
+
+  <div class="features-grid">
+
+    <!-- Card 1: Tangkapan -->
+    <a href="catches.html" class="feature-card reveal reveal-delay-1">
+      <div class="feature-card-img feature-card-img-1">
+        <div class="feature-card-img-placeholder">🐟</div>
+        <div class="feature-card-overlay"></div>
+        <div class="feature-card-badge">Galeri</div>
+      </div>
+      <div class="feature-card-body">
+        <div class="feature-card-icon">🐠</div>
+        <h3 class="feature-card-title">Tangkapan Ikan</h3>
+        <p class="feature-card-desc">Galeri lengkap setiap ikan yang berhasil ditangkap — lengkap dengan data berat, panjang, dan lokasi.</p>
+        <span class="feature-card-stat">
+          <span class="feature-card-stat-icon">📊</span>
+          105 Tangkapan Tercatat
+        </span>
+      </div>
+      <div class="feature-card-arrow">→</div>
+    </a>
+
+    <!-- Card 2: Dokumentasi -->
+    <a href="documentation.html" class="feature-card reveal reveal-delay-2">
+      <div class="feature-card-img feature-card-img-2">
+        <div class="feature-card-img-placeholder">📸</div>
+        <div class="feature-card-overlay"></div>
+        <div class="feature-card-badge">Foto</div>
+      </div>
+      <div class="feature-card-body">
+        <div class="feature-card-icon">🌿</div>
+        <h3 class="feature-card-title">Dokumentasi</h3>
+        <p class="feature-card-desc">Momen perjalanan, pemandangan sungai, peralatan, dan kenangan tak terlupakan di alam terbuka.</p>
+        <span class="feature-card-stat">
+          <span class="feature-card-stat-icon">🖼️</span>
+          42 Foto Perjalanan
+        </span>
+      </div>
+      <div class="feature-card-arrow">→</div>
+    </a>
+
+    <!-- Card 3: Map -->
+    <a href="map.html" class="feature-card reveal reveal-delay-3">
+      <div class="feature-card-img feature-card-img-3">
+        <div class="feature-card-img-placeholder">🗺️</div>
+        <div class="feature-card-overlay"></div>
+        <div class="feature-card-badge">Interaktif</div>
+      </div>
+      <div class="feature-card-body">
+        <div class="feature-card-icon">📍</div>
+        <h3 class="feature-card-title">Map Spot Memancing</h3>
+        <p class="feature-card-desc">Peta interaktif seluruh spot memancing yang pernah dikunjungi — klik marker untuk detail lengkap.</p>
+        <span class="feature-card-stat">
+          <span class="feature-card-stat-icon">🌏</span>
+          5 Spot Terdaftar
+        </span>
+      </div>
+      <div class="feature-card-arrow">→</div>
+    </a>
+
+  </div>
+</section>
+
+<!-- ─── Stats ─── -->
+<section id="stats">
+  <div class="stats-grid">
+    <div class="stat-item reveal">
+      <div class="stat-number" data-count="105" data-suffix="">105</div>
+      <div class="stat-label">Total Tangkapan</div>
+    </div>
+    <div class="stat-item reveal reveal-delay-1">
+      <div class="stat-number" data-count="5" data-suffix="">5</div>
+      <div class="stat-label">Spot Dikunjungi</div>
+    </div>
+    <div class="stat-item reveal reveal-delay-2">
+      <div class="stat-number" data-count="8" data-suffix="">8</div>
+      <div class="stat-label">Spesies Ikan</div>
+    </div>
+    <div class="stat-item reveal reveal-delay-3">
+      <div class="stat-number" data-count="42" data-suffix="">42</div>
+      <div class="stat-label">Foto Tersimpan</div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── Latest Catches Preview ─── -->
+<section id="latest">
+  <div class="section-inner">
+    <div style="display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:1rem;margin-bottom:2rem;">
+      <div class="reveal">
+        <span class="section-label">Terbaru</span>
+        <h2 class="section-title">Tangkapan <em>Terakhir</em></h2>
+      </div>
+      <a href="catches.html" class="btn btn-river btn-sm reveal">Lihat Semua →</a>
+    </div>
+
+    <div class="latest-grid">
+      <div class="latest-card reveal reveal-delay-1"
+           data-lightbox
+           data-img="images/fish/ikan-mas-1.jpg"
+           data-title="Ikan Mas"
+           data-sub="1.2 kg · Sungai Progo"
+           data-emoji="🐠"
+           data-color="linear-gradient(135deg,#1a4a6e,#2d7ab5)">
+        <div class="latest-img-placeholder placeholder-1">🐠</div>
+        <div class="latest-card-info">
+          <div class="latest-card-name">Ikan Mas</div>
+          <div class="latest-card-weight">⚖️ 1.2 kg</div>
+        </div>
+      </div>
+      <div class="latest-card reveal reveal-delay-2"
+           data-lightbox
+           data-img="images/fish/nila-1.jpg"
+           data-title="Nila"
+           data-sub="0.8 kg · Sungai Code"
+           data-emoji="🐡"
+           data-color="linear-gradient(135deg,#2d5016,#4a7c24)">
+        <div class="latest-img-placeholder placeholder-2">🐡</div>
+        <div class="latest-card-info">
+          <div class="latest-card-name">Nila</div>
+          <div class="latest-card-weight">⚖️ 0.8 kg</div>
+        </div>
+      </div>
+      <div class="latest-card reveal reveal-delay-3"
+           data-lightbox
+           data-img="images/fish/gabus-1.jpg"
+           data-title="Gabus"
+           data-sub="1.5 kg · Sungai Opak"
+           data-emoji="🐟"
+           data-color="linear-gradient(135deg,#0d2b42,#1a4a6e)">
+        <div class="latest-img-placeholder placeholder-3">🐟</div>
+        <div class="latest-card-info">
+          <div class="latest-card-name">Gabus</div>
+          <div class="latest-card-weight">⚖️ 1.5 kg</div>
+        </div>
+      </div>
+      <div class="latest-card reveal reveal-delay-4"
+           data-lightbox
+           data-img="images/fish/patin-1.jpg"
+           data-title="Patin"
+           data-sub="2.1 kg · Sungai Oya"
+           data-emoji="🦈"
+           data-color="linear-gradient(135deg,#4a3000,#c9a84c)">
+        <div class="latest-img-placeholder placeholder-4">🦈</div>
+        <div class="latest-card-info">
+          <div class="latest-card-name">Patin</div>
+          <div class="latest-card-weight">⚖️ 2.1 kg</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── About ─── -->
+<section id="about">
+  <div class="about-inner">
+    <div class="about-image reveal">
+      <div class="about-img-wrap">
+        <div class="about-img-placeholder">🏕️</div>
+      </div>
+      <div class="about-accent">
+        <div class="about-accent-num">3+</div>
+        <div class="about-accent-text">Tahun<br>Memancing</div>
+      </div>
+    </div>
+    <div class="about-text reveal reveal-delay-2">
+      <span class="section-label">Tentang Jurnal Ini</span>
+      <h2 class="section-title">Setiap Sungai<br>Punya <em>Ceritanya</em></h2>
+      <p>Alip Fishing Journey bukan sekadar catatan ikan yang ditangkap — ini adalah dokumentasi perjalanan ke sudut-sudut sungai Indonesia yang tenang dan penuh kejutan.</p>
+      <p>Dari awal subuh di tepi Sungai Progo hingga sore yang damai di Sungai Opak, setiap momen diabadikan dengan penuh rasa.</p>
+      <div class="about-features">
+        <div class="about-feature"><span class="about-feature-dot"></span> Dokumentasi lokasi dan kondisi spot memancing</div>
+        <div class="about-feature"><span class="about-feature-dot"></span> Data tangkapan terinci dengan foto bukti</div>
+        <div class="about-feature"><span class="about-feature-dot"></span> Peta interaktif semua spot yang dikunjungi</div>
+        <div class="about-feature"><span class="about-feature-dot"></span> Tips dan catatan untuk pemancing lain</div>
+      </div>
+      <a href="documentation.html" class="btn btn-river">📸 Lihat Dokumentasi</a>
+    </div>
+  </div>
+</section>
+
+<!-- ─── Lightbox ─── -->
+<div id="lightbox">
+  <button class="lightbox-close" id="lb-close">✕</button>
+  <div class="lightbox-inner">
+    <img class="lightbox-img" id="lb-img" src="" alt="" style="display:none" />
+    <div class="lightbox-img-placeholder" id="lb-placeholder"></div>
+    <div class="lightbox-info">
+      <div class="lightbox-title" id="lb-title"></div>
+      <div class="lightbox-sub" id="lb-sub"></div>
+    </div>
+  </div>
+</div>
+
+<!-- ─── Footer ─── -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="nav-logo" style="margin-bottom:1rem">
+          <span class="nav-logo-icon">🎣</span>
+          <span class="nav-logo-text">Alip <span>Fishing</span> Journey</span>
+        </div>
+        <p>Mendokumentasikan keindahan sungai dan alam Indonesia melalui perjalanan memancing yang penuh makna.</p>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Navigasi</div>
+        <a href="index.html">Beranda</a>
+        <a href="catches.html">Tangkapan Ikan</a>
+        <a href="documentation.html">Dokumentasi</a>
+        <a href="map.html">Peta Spot</a>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Info</div>
+        <a href="#">Tentang Jurnal</a>
+        <a href="#">Spot Favorit</a>
+        <a href="#">Tips Memancing</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copy">© 2026 Alip Fishing Journey. Dibuat dengan <span class="footer-heart">♥</span> untuk alam.</span>
+      <span class="footer-tagline">"Sabar dan nikmati setiap momen di tepi sungai."</span>
+    </div>
+  </div>
+</footer>
+
+<!-- Back to Top -->
+<button id="back-to-top" aria-label="Kembali ke atas">↑</button>
+
+<script src="script.js"></script>
+</body>
+</html>
