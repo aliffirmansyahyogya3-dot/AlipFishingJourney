@@ -196,13 +196,19 @@ window.addEventListener('load', () => {
       if (lbTitle) lbTitle.textContent = title;
       if (lbSub) lbSub.textContent = sub;
       lightbox.classList.add('open');
+      // Use class-based approach for better control
+      document.documentElement.classList.add('lightbox-open');
       document.body.style.overflow = 'hidden';
     });
   });
 
   function closeLb() {
     lightbox.classList.remove('open');
+    // Explicitly remove scroll lock
+    document.documentElement.classList.remove('lightbox-open');
     document.body.style.overflow = '';
+    // Reset to auto for extra safety
+    document.body.style.overflowY = 'auto';
   }
 
   document.getElementById('lb-close')?.addEventListener('click', closeLb);
