@@ -569,6 +569,105 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   50% { transform: scaleY(0.6); opacity: 1; }
 }
 
+
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+ 
+  background: #0a2a3a;
+  font-family: 'Georgia', serif;
+  touch-action: none;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+#pond {
+  position: absolute;
+  top: 0; left: 0; inset:0;
+  width: 100%; height: 100%;
+  display: block;
+  cursor: none;
+}
+
+#ui-overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  pointer-events: none;
+  z-index: 10;
+}
+
+#hint {
+  position: absolute;
+  bottom: 32px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 999px;
+  padding: 8px 20px;
+  color: rgba(255,255,255,0.75);
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  animation: floatHint 3s ease-in-out infinite;
+  transition: opacity 0.8s ease;
+}
+
+#hint.hidden { opacity: 0; }
+
+.hint-icon {
+  font-size: 16px;
+  animation: tapPulse 1.5s ease-in-out infinite;
+}
+
+@keyframes tapPulse {
+  0%, 100% { transform: scale(1); }
+  50%       { transform: scale(1.2); }
+}
+
+@keyframes floatHint {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50%       { transform: translateX(-50%) translateY(-5px); }
+}
+
+#pond-label {
+  position: absolute;
+  top: 24px;
+  right: 28px;
+  color: rgba(255,255,255,0.18);
+  font-size: 28px;
+  letter-spacing: 0.15em;
+  font-style: italic;
+  text-shadow: 0 0 20px rgba(100,200,255,0.3);
+}
+
+#cursor-ring {
+  position: fixed;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(180,240,255,0.5);
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  transition: transform 0.08s ease, opacity 0.2s ease;
+  mix-blend-mode: screen;
+}
+
+
+
 /* ── Home — Feature Cards ── */
 #features {
   padding: 5rem 1.5rem 6rem;
