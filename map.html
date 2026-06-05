@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Peta Spot — Alip Fishing Journey</title>
-  <meta name="description" content="Peta interaktif spot memancing di sungai-sungai Indonesia." />
+  <meta name="description" content="Peta interaktif spot memancing di sungai-sungai" />
   <link rel="stylesheet" href="style.css" />
   <!-- Leaflet CSS -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
@@ -86,7 +86,7 @@
   <div class="nav-inner">
     <a href="index.html" class="nav-logo">
       <span class="nav-logo-icon">🎣</span>
-      <span class="nav-logo-text">Alip <span>Fishing</span></span>
+      <span class="nav-logo-text">Fising <span>4Life</span></span>
     </a>
     <ul class="nav-links">
       <li><a href="index.html">Beranda</a></li>
@@ -111,105 +111,21 @@
   <div class="page-header-content">
     <div class="page-header-label">🗺️ Peta Interaktif</div>
     <h1 class="page-header-title">Spot <em>Memancing</em></h1>
-    <p class="page-header-sub">5 spot sungai terbaik yang pernah dikunjungi</p>
+    <p class="page-header-sub"> banyak spot sungai terbaik yang pernah dikunjungi</p>
   </div>
 </header>
 
 <!-- ─── Info Strip ─── -->
-<div class="map-info-strip">
-  <div class="map-info-strip-inner">
-    <div class="map-info-text">
-      <h3>🌏 Wilayah Jawa Tengah & DIY</h3>
-      <p>Semua spot berlokasi di sungai-sungai terbaik di Yogyakarta dan sekitarnya.</p>
-    </div>
-    <div class="map-legend">
-      <div class="legend-item"><div class="legend-dot ld-river"></div> Sungai Utama</div>
-      <div class="legend-item"><div class="legend-dot ld-gold"></div> Spot Favorit</div>
-      <div class="legend-item"><div class="legend-dot ld-forest"></div> Area Hutan</div>
-    </div>
-  </div>
-</div>
 
 <!-- ─── Map Section ─── -->
 <section id="map-section">
-  <div class="map-layout">
-
-    <!-- Sidebar -->
-    <div class="map-sidebar">
-      <div>
-        <div class="map-sidebar-title">📍 Daftar Spot</div>
-        <div class="map-sidebar-sub">Klik untuk terbang ke lokasi di peta</div>
-      </div>
-
-      <div class="spot-list">
-
-        <div class="spot-item active" data-spot="progo">
-          <div class="spot-icon">🏞️</div>
-          <div class="spot-info">
-            <div class="spot-name">Sungai Progo</div>
-            <div class="spot-sub">Kulon Progo, DIY</div>
-            <div class="spot-catches-badge">🎣 24 tangkapan</div>
-          </div>
-          <div class="spot-count">24</div>
-        </div>
-
-        <div class="spot-item" data-spot="opak">
-          <div class="spot-icon">🌿</div>
-          <div class="spot-info">
-            <div class="spot-name">Sungai Opak</div>
-            <div class="spot-sub">Bantul, DIY</div>
-            <div class="spot-catches-badge">🎣 18 tangkapan</div>
-          </div>
-          <div class="spot-count">18</div>
-        </div>
-
-        <div class="spot-item" data-spot="code">
-          <div class="spot-icon">🏙️</div>
-          <div class="spot-info">
-            <div class="spot-name">Sungai Code</div>
-            <div class="spot-sub">Kota Yogyakarta, DIY</div>
-            <div class="spot-catches-badge">🎣 31 tangkapan</div>
-          </div>
-          <div class="spot-count">31</div>
-        </div>
-
-        <div class="spot-item" data-spot="oya">
-          <div class="spot-icon">🪨</div>
-          <div class="spot-info">
-            <div class="spot-name">Sungai Oya</div>
-            <div class="spot-sub">Gunung Kidul, DIY</div>
-            <div class="spot-catches-badge">🎣 12 tangkapan</div>
-          </div>
-          <div class="spot-count">12</div>
-        </div>
-
-        <div class="spot-item" data-spot="bogowonto">
-          <div class="spot-icon">🌄</div>
-          <div class="spot-info">
-            <div class="spot-name">Sungai Bogowonto</div>
-            <div class="spot-sub">Purworejo, Jawa Tengah</div>
-            <div class="spot-catches-badge">🎣 20 tangkapan</div>
-          </div>
-          <div class="spot-count">20</div>
-        </div>
-
-      </div><!-- /spot-list -->
-
-      <!-- Tips box -->
-      <div style="background:linear-gradient(135deg,var(--river-dark),var(--river));border-radius:var(--radius-md);padding:1.2rem;color:var(--white);margin-top:0.5rem;">
-        <div style="font-size:0.75rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold-light);font-weight:600;margin-bottom:0.5rem;">💡 Tips</div>
-        <p style="font-family:var(--font-accent);font-style:italic;font-size:0.88rem;color:rgba(255,255,255,0.7);line-height:1.6;">Scroll/pinch peta untuk zoom. Klik marker untuk info lengkap spot.</p>
-      </div>
-
-    </div><!-- /sidebar -->
-
-    <!-- Map -->
-    <div class="map-container">
-      <div id="fishing-map"></div>
+  <div class="map-container" style="padding:20px;">
+    <div id="fishing-map"
+         style="height:75vh;border-radius:20px;overflow:hidden;">
     </div>
-
   </div>
 </section>
+  
 
 <!-- ─── Footer ─── -->
 <footer>
@@ -233,12 +149,17 @@
         <div class="footer-col-title">Info</div>
         <a href="#">Tentang Jurnal</a>
         <a href="#">Spot Favorit</a>
-        <a href="#">Tips Memancing</a>
+        
       </div>
     </div>
     <div class="footer-bottom">
-      <span class="footer-copy">© 2026 Alip Fishing Journey. Dibuat dengan <span class="footer-heart">♥</span> untuk alam.</span>
-      <span class="footer-tagline">"Sabar dan nikmati setiap momen di tepi sungai."</span>
+      <span class="footer-copy">
+  © 2026 Alip Fishing Journey. Dibuat dengan Claude dan GPT
+</span>
+
+<span class="footer-tagline">
+  "Just chill and enjoy the vibes"
+</span>
     </div>
   </div>
 </footer>
@@ -247,6 +168,10 @@
 
 <!-- Leaflet JS -->
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+<!-- KML Loader -->
+<script src="https://unpkg.com/leaflet-omnivore@0.3.4/leaflet-omnivore.min.js"></script>
+  
 <script src="script.js"></script>
 </body>
 </html>
