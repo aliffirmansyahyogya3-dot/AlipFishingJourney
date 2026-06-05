@@ -244,11 +244,75 @@ window.addEventListener('load', () => {
     }
   ).addTo(map);
 
-  omnivore.kml('peta.kml')
-    .on('ready', function () {
-      map.fitBounds(this.getBounds());
-    })
-    .addTo(map);
+  function toDMS(coord, isLat) {
+  const abs = Math.abs(coord);
+  const deg = Math.floor(abs);
+  const minFloat = (abs - deg) * 60;
+  const min = Math.floor(minFloat);
+  const sec = ((minFloat - min) * 60).toFixed(2);
+
+  const dir = isLat
+    ? (coord >= 0 ? 'N' : 'S')
+    : (coord >= 0 ? 'E' : 'W');
+
+  return `${deg}°${min}'${sec}"${dir}`;
+}
+
+omnivore.kml('peta.kml')
+  .on('ready', function () {
+
+    map.fitBounds(this.getBounds());
+
+    this.eachLayer(function(layer) {
+
+      if (!layer.getLatLng) return;
+
+      const latlng = layer.getLatLng();
+
+      const latDMS = toDMS(latlng.lat, true);
+      const lngDMS = toDMS(latlng.lng, false);
+
+      const googleEarthUrl =
+        `https://earth.google.com/web/search/${latlng.lat},${latlng.lng}`;
+
+      layer.bindPopup(`
+        <div style="min-width:220px">
+
+          <h3 style="margin:0 0 12px 0">
+            📍 spot 🐟
+          </h3>
+
+          <div style="font-size:14px;color:#666;">
+            Lokasi
+          </div>
+
+          <div style="margin-top:6px;font-weight:600;">
+            ${latDMS} ${lngDMS}
+          </div>
+
+          <hr style="margin:12px 0">
+
+          <a href="${googleEarthUrl}"
+             target="_blank"
+             style="
+                display:block;
+                text-align:center;
+                padding:10px;
+                background:#1976d2;
+                color:white;
+                text-decoration:none;
+                border-radius:8px;
+             ">
+             🌍 Buka di Google Earth
+          </a>
+
+        </div>
+      `);
+
+    });
+
+  })
+  .addTo(map);
 
 })();
 
