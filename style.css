@@ -1405,6 +1405,36 @@ footer {
   font-size: 0.88rem;
   color: rgba(255,255,255,0.35);
 }
+.footer-contact{
+    margin-top:30px;
+}
+
+.footer-contact h4{
+    color:#d4af37;
+    margin-bottom:15px;
+    letter-spacing:2px;
+}
+
+.social-link{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    color:#eaeaea;
+    text-decoration:none;
+    margin:12px 0;
+    font-size:15px;
+    transition:.3s;
+}
+
+.social-link i{
+    font-size:22px;
+    width:24px;
+}
+
+.social-link:hover{
+    color:#d4af37;
+    transform:translateX(5px);
+}
 
 /* ========================================
    RESPONSIVE
