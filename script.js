@@ -228,134 +228,32 @@ window.addEventListener('load', () => {
 })();
 
 /* ── Map Page ── */
-(function initMap() {
+
+
+ (function initMap() {
+
   const mapEl = document.getElementById('fishing-map');
   if (!mapEl || typeof L === 'undefined') return;
 
-  const spots = [
-    {
-      id: 'progo',
-      name: 'Sungai Progo',
-      lat: -7.7956, lng: 110.2041,
-      region: 'Kulon Progo, DIY',
-      fish: ['Ikan Mas', 'Nila', 'Gabus'],
-      catches: 24,
-      img: 'images/spots/spot-progo.jpg',
-      emoji: '🏞️',
-      note: 'Spot terbaik di pagi hari antara pukul 05.00–08.00. Arus sedang, air jernih.',
-      color: 'linear-gradient(135deg, #1a4a6e, #2d7ab5)',
-    },
-    {
-      id: 'opak',
-      name: 'Sungai Opak',
-      lat: -7.8774, lng: 110.3617,
-      region: 'Bantul, DIY',
-      fish: ['Patin', 'Lele', 'Nila'],
-      catches: 18,
-      img: 'images/spots/spot-opak.jpg',
-      emoji: '🌿',
-      note: 'Spot favorit sore hari. Banyak semak di tepi sungai, cocok untuk casting.',
-      color: 'linear-gradient(135deg, #2d5016, #4a7c24)',
-    },
-    {
-      id: 'code',
-      name: 'Sungai Code',
-      lat: -7.7971, lng: 110.3686,
-      region: 'Kota Yogyakarta, DIY',
-      fish: ['Nila', 'Ikan Mas', 'Betok'],
-      catches: 31,
-      img: 'images/spots/spot-code.jpg',
-      emoji: '🏙️',
-      note: 'Spot urban yang ramai. Ikan banyak di bawah jembatan lama.',
-      color: 'linear-gradient(135deg, #0d2b42, #1a4a6e)',
-    },
-    {
-      id: 'oya',
-      name: 'Sungai Oya',
-      lat: -7.9432, lng: 110.5012,
-      region: 'Gunung Kidul, DIY',
-      fish: ['Gabus', 'Patin', 'Baung'],
-      catches: 12,
-      img: 'images/spots/spot-oya.jpg',
-      emoji: '🪨',
-      note: 'Spot terpencil berbatu. Perlu jalan kaki 20 menit. Hasil memuaskan.',
-      color: 'linear-gradient(135deg, #3d2800, #8c6020)',
-    },
-    {
-      id: 'bogowonto',
-      name: 'Sungai Bogowonto',
-      lat: -7.7321, lng: 110.0145,
-      region: 'Purworejo, Jawa Tengah',
-      fish: ['Nila', 'Tawes', 'Ikan Mas'],
-      catches: 20,
-      img: 'images/spots/spot-bogowonto.jpg',
-      emoji: '🌄',
-      note: 'Pemandangan sawah yang indah. Arus deras saat musim hujan.',
-      color: 'linear-gradient(135deg, #1a3d00, #4a7c24)',
-    },
-  ];
+  const map = L.map('fishing-map');
 
-  // Init map
-  const map = L.map('fishing-map', {
-    center: [-7.85, 110.28],
-    zoom: 10,
-    zoomControl: true,
-    scrollWheelZoom: false,
-  });
-
-  // Tile layer (OSM)
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
-    maxZoom: 18,
-  }).addTo(map);
-
-  // Custom icon
-  function createIcon(emoji) {
-    return L.divIcon({
-      className: '',
-      html: `<div class="custom-marker"><div class="custom-marker-inner">${emoji}</div></div>`,
-      iconSize: [36, 36],
-      iconAnchor: [18, 36],
-      popupAnchor: [0, -40],
-    });
-  }
-
-  // Add markers
-  spots.forEach(spot => {
-    const fishTags = spot.fish.map(f => `<span class="fish-tag">${f}</span>`).join('');
-    const popupHtml = `
-      <div class="map-popup">
-        <div class="map-popup-img">
-          <div class="map-popup-placeholder" style="background:${spot.color}">${spot.emoji}</div>
-        </div>
-        <div class="map-popup-body">
-          <div class="map-popup-name">${spot.name}</div>
-          <div class="map-popup-fish">${fishTags}</div>
-          <div class="map-popup-stat">📍 ${spot.region}</div>
-          <div class="map-popup-stat">🎣 ${spot.catches} tangkapan tercatat</div>
-          <div class="map-popup-note">"${spot.note}"</div>
-          <a href="https://earth.google.com/web/search/${encodeURIComponent(spot.name + ' ' + spot.region)}" target="_blank" class="map-popup-btn">
-            🌍 Lihat di Google Earth
-          </a>
-        </div>
-      </div>
-    `;
-    const marker = L.marker([spot.lat, spot.lng], { icon: createIcon(spot.emoji) })
-      .addTo(map)
-      .bindPopup(popupHtml, { maxWidth: 280, minWidth: 240 });
-
-    // Sidebar item click
-    const sidebarItem = document.querySelector(`[data-spot="${spot.id}"]`);
-    if (sidebarItem) {
-      sidebarItem.addEventListener('click', () => {
-        document.querySelectorAll('.spot-item').forEach(s => s.classList.remove('active'));
-        sidebarItem.classList.add('active');
-        map.flyTo([spot.lat, spot.lng], 13, { duration: 1.2 });
-        setTimeout(() => marker.openPopup(), 1300);
-      });
+  L.tileLayer(
+    'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',
+    {
+      attribution: '&copy; Esri'
     }
-  });
+  ).addTo(map);
+
+  omnivore.kml('peta.kml')
+    .on('ready', function () {
+      map.fitBounds(this.getBounds());
+    })
+    .addTo(map);
+
 })();
+
+  
+  
 
 /* ── Smooth internal anchor scrolling ── */
 document.querySelectorAll('a[href^="#"]').forEach(a => {
