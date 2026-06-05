@@ -7,8 +7,7 @@
   <meta name="description" content="Galeri lengkap tangkapan spesies ikan dari berbagai spot sungai-sungai." />
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎣</text></svg>" />
-  <link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 <body>
 
@@ -30,7 +29,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     </a>
     <ul class="nav-links">
       <li><a href="index.html">Beranda</a></li>
-      <li><a href="catches.html">Tangkapan</a></li>
+      <li><a href="catches.html" class="active">Tangkapan</a></li>
       <li><a href="documentation.html">Dokumentasi</a></li>
       <li><a href="map.html">Peta Spot</a></li>
     </ul>
@@ -68,7 +67,6 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
       <button class="filter-btn active" data-filter="all">Semua</button>
       <button class="filter-btn" data-filter="Cyprinidae">Keluarga Cyprinidae</button>
       <button class="filter-btn" data-filter="Bagridae">Keluarga Bagridae</button>
-      
     </div>
   </div>
 
@@ -76,131 +74,119 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
   <div class="catches-grid" id="catches-grid">
 
     <!-- Card 1 -->
-<div class="fish-card reveal"
-     data-species="Cyprinidae"
-     data-lightbox
-     data-img="derbang.jpg"
-     data-title="Ikan derbang"
-     data-sub="2 Juni 2026"
-     data-emoji="🐠"
-     data-color="linear-gradient(135deg,#1a4a6e,#2d7ab5)">
+    <div class="fish-card reveal"
+         data-species="Cyprinidae"
+         data-lightbox
+         data-img="derbang.jpg"
+         data-title="Ikan derbang"
+         data-sub="2 Juni 2026"
+         data-emoji="🐠"
+         data-color="linear-gradient(135deg,#1a4a6e,#2d7ab5)">
+      <div class="fish-card-img">
+        <img src="derbang.jpg" alt="Ikan derbang" loading="lazy">
+        <div class="fish-species-tag">Systomus rubripinnis</div>
+      </div>
+      <div class="fish-card-body">
+        <div class="fish-card-name">Ikan derbang</div>
+        <div class="fish-card-location">📅 2 Juni 2026</div>
+      </div>
+    </div>
 
-  <div class="fish-card-img">
-    <img src="derbang.jpg" alt="Ikan derbang">
-    <div class="fish-species-tag">Systomus rubripinnis</div>
-  </div>
-
-  <div class="fish-card-body">
-    <div class="fish-card-name">Ikan derbang</div>
-    <div class="fish-card-location">📅 2 Juni 2026</div>
-  </div>
-
-</div>
     <!-- Card 2 -->
-<div class="fish-card reveal"
-     data-species="Cyprinidae"
-     data-lightbox
-     data-img="beles.jpg"
-     data-title="Ikan beles"
-     data-sub="4 Juni 2026"
-     data-emoji="🐟"
-     data-color="linear-gradient(135deg,#1a4a6e,#2d7ab5)">
+    <div class="fish-card reveal"
+         data-species="Cyprinidae"
+         data-lightbox
+         data-img="beles.jpg"
+         data-title="Ikan beles"
+         data-sub="4 Juni 2026"
+         data-emoji="🐟"
+         data-color="linear-gradient(135deg,#1a4a6e,#2d7ab5)">
+      <div class="fish-card-img">
+        <img src="beles.jpg" alt="Ikan beles" loading="lazy">
+        <div class="fish-species-tag">Barbonymus balleroides</div>
+      </div>
+      <div class="fish-card-body">
+        <div class="fish-card-name">Ikan beles</div>
+        <div class="fish-card-location">📅 4 Juni 2026</div>
+      </div>
+    </div>
 
-  <div class="fish-card-img">
-    <img src="beles.jpg" alt="Ikan beles">
-    <div class="fish-species-tag">Barbonymus balleroides</div>
-  </div>
-
-  <div class="fish-card-body">
-    <div class="fish-card-name">Ikan beles</div>
-    <div class="fish-card-location">📅 4 Juni 2026</div>
-  </div>
-
-</div>
     <!-- Card 3 -->
-<div class="fish-card reveal"
-     data-species="Cyprinidae"
-     data-lightbox
-     data-img="wader.jpg"
-     data-title="Ikan wader"
-     data-sub="2 Juni 2026"
-     data-emoji="🐡"
-     data-color="linear-gradient(135deg,#1a4a6e,#2d7ab5)">
+    <div class="fish-card reveal"
+         data-species="Cyprinidae"
+         data-lightbox
+         data-img="wader.jpg"
+         data-title="Ikan wader"
+         data-sub="2 Juni 2026"
+         data-emoji="🐡"
+         data-color="linear-gradient(135deg,#1a4a6e,#2d7ab5)">
+      <div class="fish-card-img">
+        <img src="wader.jpg" alt="Ikan wader" loading="lazy">
+        <div class="fish-species-tag">Barbodes binotatus</div>
+      </div>
+      <div class="fish-card-body">
+        <div class="fish-card-name">Ikan wader</div>
+        <div class="fish-card-location">📅 2 Juni 2026</div>
+      </div>
+    </div>
 
-  <div class="fish-card-img">
-    <img src="wader.jpg" alt="Ikan wader">
-    <div class="fish-species-tag">Barbodes binotatus</div>
-  </div>
-
-  <div class="fish-card-body">
-    <div class="fish-card-name">Ikan wader</div>
-    <div class="fish-card-location">📅 2 Juni 2026</div>
-  </div>
-
-</div>
     <!-- Card 4 -->
-<div class="fish-card reveal"
-     data-species="Cyprinidae"
-     data-lightbox
-     data-img="hampala.jpg"
-     data-title="Ikan hampala"
-     data-sub="24 Agustus 2024"
-     data-emoji="🦈"
-     data-color="linear-gradient(135deg,#1a4a6e,#2d7ab5)">
+    <div class="fish-card reveal"
+         data-species="Cyprinidae"
+         data-lightbox
+         data-img="hampala.jpg"
+         data-title="Ikan hampala"
+         data-sub="24 Agustus 2024"
+         data-emoji="🦈"
+         data-color="linear-gradient(135deg,#1a4a6e,#2d7ab5)">
+      <div class="fish-card-img">
+        <img src="hampala.jpg" alt="Ikan hampala" loading="lazy">
+        <div class="fish-species-tag">Hampala macrolepidota</div>
+      </div>
+      <div class="fish-card-body">
+        <div class="fish-card-name">Ikan hampala</div>
+        <div class="fish-card-location">📅 24 Agustus 2024</div>
+      </div>
+    </div>
 
-  <div class="fish-card-img">
-    <img src="hampala.jpg" alt="Ikan hampala">
-    <div class="fish-species-tag">Hampala macrolepidota</div>
-  </div>
-
-  <div class="fish-card-body">
-    <div class="fish-card-name">Ikan hampala</div>
-    <div class="fish-card-location">📅 24 Agustus 2024</div>
-  </div>
-
-</div>
     <!-- Card 5 -->
-<div class="fish-card reveal"
-     data-species="Cyprinidae"
-     data-lightbox
-     data-img="nilem.jpg"
-     data-title="Ikan nilem"
-     data-sub="10 November 2024"
-     data-emoji="🐠"
-     data-color="linear-gradient(135deg,#1a4a6e,#2d7ab5)">
+    <div class="fish-card reveal"
+         data-species="Cyprinidae"
+         data-lightbox
+         data-img="nilem.jpg"
+         data-title="Ikan nilem"
+         data-sub="10 November 2024"
+         data-emoji="🐠"
+         data-color="linear-gradient(135deg,#1a4a6e,#2d7ab5)">
+      <div class="fish-card-img">
+        <img src="nilem.jpg" alt="Ikan nilem" loading="lazy">
+        <div class="fish-species-tag">Osteochilus vittatus</div>
+      </div>
+      <div class="fish-card-body">
+        <div class="fish-card-name">Ikan nilem</div>
+        <div class="fish-card-location">📅 10 November 2024</div>
+      </div>
+    </div>
 
-  <div class="fish-card-img">
-    <img src="nilem.jpg" alt="Ikan nilem">
-    <div class="fish-species-tag">Osteochilus vittatus</div>
-  </div>
-
-  <div class="fish-card-body">
-    <div class="fish-card-name">Ikan nilem</div>
-    <div class="fish-card-location">📅 10 November 2024</div>
-  </div>
-
-</div>
     <!-- Card 6 -->
-<div class="fish-card reveal"
-     data-species="Bagridae"
-     data-lightbox
-     data-img="keting.jpg"
-     data-title="Ikan keting"
-     data-sub="24 Oktober 2024"
-     data-emoji="🐠"
-     data-color="linear-gradient(135deg,#1a4a6e,#2d7ab5)">
+    <div class="fish-card reveal"
+         data-species="Bagridae"
+         data-lightbox
+         data-img="keting.jpg"
+         data-title="Ikan keting"
+         data-sub="24 Oktober 2024"
+         data-emoji="🐠"
+         data-color="linear-gradient(135deg,#1a4a6e,#2d7ab5)">
+      <div class="fish-card-img">
+        <img src="keting.jpg" alt="Ikan keting" loading="lazy">
+        <div class="fish-species-tag">Mystus nigriceps</div>
+      </div>
+      <div class="fish-card-body">
+        <div class="fish-card-name">Ikan keting</div>
+        <div class="fish-card-location">📅 24 Oktober 2024</div>
+      </div>
+    </div>
 
-  <div class="fish-card-img">
-    <img src="keting.jpg" alt="Ikan keting">
-    <div class="fish-species-tag">Mystus nigriceps </div>
-  </div>
-
-  <div class="fish-card-body">
-    <div class="fish-card-name">Ikan keting</div>
-    <div class="fish-card-location">📅 24 Oktober 2024</div>
-  </div>
-
-</div>
     <!-- No results -->
     <div id="no-results" class="no-results" style="display:none">
       🔍 Tidak ada ikan yang ditemukan. Coba kata kunci lain.
@@ -227,11 +213,11 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
   <div class="footer-inner">
     <div class="footer-top">
       <div class="footer-brand">
-        <div class="nav-logo" style="margin-bottom:1rem">
+        <div class="nav-logo" style="margin-bottom:0.75rem">
           <span class="nav-logo-icon">🎣</span>
           <span class="nav-logo-text">Alip <span>Fishing</span> Journey</span>
         </div>
-        <p>Mendokumentasikan sungai dan alam  melalui perjalanan memancing yang penuh makna.</p>
+        <p>Mendokumentasikan sungai dan alam melalui perjalanan memancing yang penuh makna.</p>
       </div>
       <div class="footer-col">
         <div class="footer-col-title">Navigasi</div>
@@ -243,43 +229,25 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
       <div class="footer-col">
         <div class="footer-col-title">Info</div>
         <a href="#">Tentang Jurnal</a>
-        
       </div>
     </div>
+
     <div class="footer-contact">
-
-  <h4>HUBUNGI SAYA</h4>
-
-  <a href="https://instagram.com/4lipp_f"
-     target="_blank"
-     class="social-link">
-    <i class="fa-brands fa-instagram"></i>
-    @4lipp_f
-  </a>
-
-  <a href="https://www.tiktok.com/@4lipp_f"
-     target="_blank"
-     class="social-link">
-    <i class="fa-brands fa-tiktok"></i>
-    @4lipp_f
-  </a>
-
-  <a href="https://wa.me/6288983774515"
-     target="_blank"
-     class="social-link">
-    <i class="fa-brands fa-whatsapp"></i>
-    +62 889 8377 4515
-  </a>
-
+      <h4>Hubungi Saya</h4>
+      <a href="https://instagram.com/4lipp_f" target="_blank" class="social-link">
+        <i class="fa-brands fa-instagram"></i> @4lipp_f
+      </a>
+      <a href="https://www.tiktok.com/@4lipp_f" target="_blank" class="social-link">
+        <i class="fa-brands fa-tiktok"></i> @4lipp_f
+      </a>
+      <a href="https://wa.me/6288983774515" target="_blank" class="social-link">
+        <i class="fa-brands fa-whatsapp"></i> +62 889 8377 4515
+      </a>
     </div>
-    <div class="footer-bottom">
-      <span class="footer-copy">
-  © 2026 Alip Fishing Journey. Dibuat dengan Claude dan GPT
-</span>
 
-<span class="footer-tagline">
-  "Just chill and enjoy the vibes"
-</span>
+    <div class="footer-bottom">
+      <span class="footer-copy">© 2026 Alip Fishing Journey. Dibuat dengan Claude dan GPT</span>
+      <span class="footer-tagline">"Just chill and enjoy the vibes"</span>
     </div>
   </div>
 </footer>
